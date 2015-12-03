@@ -108,6 +108,8 @@
       <div class="link-wrapper"><a href="<?php echo base_url('welcome/averageByProtocol')?>"><div class="left-nav-link"><i class="glyphicon glyphicon-signal"></i>Average By Protocol</div></a></div>
       <div class="link-wrapper"><a href="<?php echo base_url('welcome/averageSendTimeVTotalTime')?>"><div class="left-nav-link"><i class="glyphicon glyphicon-signal"></i>Average Time Ratio</div></a></div>
       <div class="link-wrapper"><a href="<?php echo base_url('welcome/search')?>"><div class="left-nav-link"><i class="glyphicon glyphicon-signal"></i>Custom Graph</div></a></div>
+      <div class="link-wrapper"><a href="<?php echo base_url('welcome/chart1')?>"><div class="left-nav-link"><i class="glyphicon glyphicon-signal"></i>Chart1</div></a></div>
+      <div class="link-wrapper"><a href="<?php echo base_url('welcome/chart2')?>"><div class="left-nav-link"><i class="glyphicon glyphicon-signal"></i>Chart2</div></a></div>
 
       <div id="copyright-div">&copy; Capstone - Team Ford</div>
     </div>

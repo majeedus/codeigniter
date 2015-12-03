@@ -90,40 +90,11 @@ class Welcome extends CI_Controller {
 
     public function selectdata()
     {
-        define('DBHOST','tcp:teamford.database.windows.net, 1433');
-        define('DBUSER','forduser@teamford');
-        define('DBPASS','TeamFord2015');
-        define('DBNAME','ford_db');
-
-
-
-        $connectionOptions = array("Database" => DBNAME, "UID" => DBUSER, "PWD" => DBPASS);
-
-        $conn = sqlsrv_connect(DBHOST, $connectionOptions);
-
-        if($conn === false) {
-            die(print_r(sqlsrv_errors(), true));
-        }
-        else  {
-        }
-
-
-
 
         $sql = "SELECT * FROM results  ";
-        $stmt = sqlsrv_query( $conn, $sql );
-        if( $stmt === false) {
-            die( print_r( sqlsrv_errors(), true) );
-        }
-
-        $rows = array();
-
-        while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
-            $rows[] = $row;
-        }
-        echo  json_encode($rows);
-        sqlsrv_free_stmt( $stmt);
-
+        $stmt = $this->db->query( $sql );
+         echo  json_encode($stmt->result());
+        exit;
 
     }
 }
